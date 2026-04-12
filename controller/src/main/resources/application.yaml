@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: controller
+  kafka:
+    bootstrap-servers: localhost:9092   # ????? ??????
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      retries: 3
+      properties:
+        linger.ms: 5
+
+log-santos:
+  valid-tokens:
+    - sk_test_1234567890
+    - sk_live_0987654321
